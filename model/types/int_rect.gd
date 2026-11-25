@@ -2,9 +2,11 @@
 extends RefCounted
 class_name IntRect
 
+const _Int2 = preload("./int2.gd")
+
 const SCHEMA = {
-	"position": ["position", true, TYPE_OBJECT, "Int2"],
-	"size": ["size", true, TYPE_OBJECT, "Int2"],
+	"position": ["position", true, TYPE_OBJECT, _Int2],
+	"size": ["size", true, TYPE_OBJECT, _Int2],
 }
 
 var position: Int2

@@ -2,9 +2,11 @@
 extends RefCounted
 class_name Rect
 
+const _Float2 := preload("./float2.gd")
+
 const SCHEMA = {
-	"position": ["position", true, TYPE_OBJECT, "Float2"],
-	"size": ["size", true, TYPE_OBJECT, "Float2"],
+	"position": ["position", true, TYPE_OBJECT, _Float2],
+	"size": ["size", true, TYPE_OBJECT, _Float2],
 }
 
 var position: Float2

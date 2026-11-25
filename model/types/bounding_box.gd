@@ -2,9 +2,11 @@
 extends RefCounted
 class_name BoundingBox
 
+const _Float3 := preload("./float3.gd")
+
 const SCHEMA = {
-	"v_min": ["min", true, TYPE_OBJECT, "Float3"],
-	"v_max": ["max", true, TYPE_OBJECT, "Float3"],
+	"v_min": ["min", true, TYPE_OBJECT, _Float3],
+	"v_max": ["max", true, TYPE_OBJECT, _Float3],
 }
 
 var v_min: Float3
