@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b7p2f4621pbmj"]
+
+[ext_resource type="Script" uid="uid://b7pnhfvtypjer" path="res://resonite_connector.gd" id="1_exh26"]
+[ext_resource type="Script" uid="uid://cn524lwcrpv7c" path="res://resonite_socket.gd" id="2_omvnb"]
+
+[node name="ResoniteConnector" type="Control" unique_id=1562502457]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_exh26")
+
+[node name="ResoniteSocket" type="Node" parent="." unique_id=2122264984]
+script = ExtResource("2_omvnb")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=499062047]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1939540524]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/HBoxContainer" unique_id=1562964185]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tree" type="Tree" parent="PanelContainer/HBoxContainer/ScrollContainer" unique_id=614110574]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer" unique_id=795970665]
+layout_mode = 2
+size_flags_horizontal = 3
