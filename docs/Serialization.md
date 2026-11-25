@@ -2,7 +2,7 @@
 
 ## Json
 
-The classes `JSONSerializer` and `JSONDeserializers` are responsible of the whole Json (de)serialization process. They use the native class `JSON` to perform safe operations when parsing and stringifying Json, but converting the resulting `Variant` into objects is a bit trickier and requires a bit of setup.
+The class `JSONSerializer` is responsible of the whole Json (de)serialization process. It uses the native class `JSON` to perform safe operations when parsing and stringifying Json, but converting the resulting `Variant` into objects is a bit trickier and requires a bit of setup.
 
 Classes become serializable if they have a default constructor and a `SCHEMA` constant or variable which defines the shape of their corresponding Json object. The schema consists of a `Dictionary[String, Array]` in which the key is the internal object's attribute name, and the array is a collection of elements that help the classes above perform the (de)serialization. They must be in the present order:
 
