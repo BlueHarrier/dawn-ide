@@ -10,7 +10,7 @@ const SCHEMA = {
 var v_min: Float3
 var v_max: Float3
 
-func _init(p_min: Float3, p_max: Float3) -> void:
+func _init(p_min: Float3 = Float3.new(), p_max: Float3 = Float3.new()) -> void:
 	v_min = p_min
 	v_max = p_max
 

@@ -10,7 +10,7 @@ const SCHEMA = {
 var position: Float2
 var size: Float2
 
-func _init(p_position: Float2, p_size: Float2) -> void:
+func _init(p_position: Float2 = Float2.new(), p_size: Float2 = Float2.new()) -> void:
 	position = p_position
 	size = p_size
 
