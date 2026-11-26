@@ -132,6 +132,10 @@ const TYPES = {
 	"double4x4": preload("./data_double4x4.gd"),
 	"double4x4?": preload("./data_nullable_double4x4.gd"),
 	"reference": preload("./data_reference.gd"),
+	"sh_l1": preload("./data_spherical_harmonics_l1.gd"),
+	"sh_l2": preload("./data_spherical_harmonics_l2.gd"),
+	"sh_l3": preload("./data_spherical_harmonics_l3.gd"),
+	"sh_l4": preload("./data_spherical_harmonics_l4.gd"),
 }
 
 @abstract func _to_variant() -> Variant
