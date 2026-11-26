@@ -8,8 +8,8 @@ Classes become serializable if they have a default constructor and a `SCHEMA` co
 
 1. `String` with the name of the Json attribute.
 2. `bool` indicating whether the attribute is mandatory or not.
-3. `Variant.Type` representing the internal Godot type of the attribute.
-4. `Variant` with additional information that each type might need to (de)serialize. It must be present, so set it to `null` if no additional information is needed for a type.
+3. `Variant.Type` representing the internal Godot type of the attribute, or an `Array[Variant.Type]` with all the possible types that the value can be.
+4. `Variant` with additional information that each type might need to (de)serialize. It must be present, so set it to `null` if no additional information is needed for a type. In case of using multiple possible types, it will be an `Array[Variant]` following the same logic.
 
 An example of schema could be:
 ```gdscript
