@@ -37,6 +37,18 @@ const TYPES = {
 	"DateTime?": preload("./data_nullable_date_time.gd"),
 	"TimeSpan": preload("./data_time_span.gd"),
 	"TimeSpan?": preload("./data_nullable_time_span.gd"),
+	"color": preload("./data_color.gd"),
+	"color?": preload("./data_nullable_color.gd"),
+	"colorX": preload("./data_color_x.gd"),
+	"colorX?": preload("./data_nullable_color_x.gd"),
+	"color32": preload("./data_color32.gd"),
+	"color32?": preload("./data_nullable_color32.gd"),
+	"Rect": preload("./data_rect.gd"),
+	"Rect?": preload("./data_nullable_rect.gd"),
+	"IntRect": preload("./data_int_rect.gd"),
+	"IntRect?": preload("./data_nullable_int_rect.gd"),
+	"BoundingBox": preload("./data_bounding_box.gd"),
+	"BoundingBox?": preload("./data_nullable_bounding_box.gd"),
 }
 
 @abstract func _to_variant() -> Variant
