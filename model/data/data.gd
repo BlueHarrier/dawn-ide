@@ -115,6 +115,22 @@ const TYPES = {
 	"long4?": preload("./data_nullable_long4.gd"),
 	"bool4": preload("./data_bool4.gd"),
 	"bool4?": preload("./data_nullable_bool4.gd"),
+	"floatQ": preload("./data_float_q.gd"),
+	"floatQ?": preload("./data_nullable_float_q.gd"),
+	"doubleQ": preload("./data_double_q.gd"),
+	"doubleQ?": preload("./data_nullable_double_q.gd"),
+	"float2x2": preload("./data_float2x2.gd"),
+	"float2x2?": preload("./data_nullable_float2x2.gd"),
+	"double2x2": preload("./data_double2x2.gd"),
+	"double2x2?": preload("./data_nullable_double2x2.gd"),
+	"float3x3": preload("./data_float3x3.gd"),
+	"float3x3?": preload("./data_nullable_float3x3.gd"),
+	"double3x3": preload("./data_double3x3.gd"),
+	"double3x3?": preload("./data_nullable_double3x3.gd"),
+	"float4x4": preload("./data_float4x4.gd"),
+	"float4x4?": preload("./data_nullable_float4x4.gd"),
+	"double4x4": preload("./data_double4x4.gd"),
+	"double4x4?": preload("./data_nullable_double4x4.gd"),
 }
 
 @abstract func _to_variant() -> Variant
