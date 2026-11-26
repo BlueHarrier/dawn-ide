@@ -4,7 +4,7 @@
 
 The class `JSONSerializer` is responsible of the whole Json (de)serialization process. It uses the native class `JSON` to perform safe operations when parsing and stringifying Json, but converting the resulting `Variant` into objects is a bit trickier and requires a bit of setup.
 
-Classes become serializable if they have a default constructor and a `SCHEMA` constant or variable which defines the shape of their corresponding Json object. The schema consists of a `Dictionary[String, Array]` in which the key is the internal object's attribute name, and the array is a collection of elements that help the classes above perform the (de)serialization. They must be in the present order:
+Classes become serializable if they have a default constructor and a `SCHEMA` constant or static variable which defines the shape of their corresponding Json object. The schema consists of a `Dictionary[String, Array]` in which the key is the internal object's attribute name, and the array is a collection of elements that help the classes above perform the (de)serialization. They must be in the present order:
 
 1. `String` with the name of the Json attribute.
 2. `bool` indicating whether the attribute is mandatory or not.
@@ -50,3 +50,7 @@ Or an inner schema `Dictionary`, identifying the final structure of the resultin
 #### TYPE_OBJECT
 
 Will be deserialized from a `Dictionary`, and the additional data will be the instantiable `Script` of the serializable class that it will turn into.
+
+### Abstract classes
+
+Sometimes, the type of a value might not be concrete, yet, it's desirable to deserialize it into an object instead of a `Variant`. For these cases, an abstract class can be used. The serializer will use it to figure out the concrete class by reading two static members: `TYPE_KEY` and `TYPES`. The first will be a `String` with the key that identifies what the concrete object should be, and the second must be a `Dictionary` that correlates the possible type identifiers with the script that must be used to deserialize. When serializing, the abstraction operation will take place instead.
