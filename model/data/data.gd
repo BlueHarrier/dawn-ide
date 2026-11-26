@@ -131,6 +131,7 @@ const TYPES = {
 	"float4x4?": preload("./data_nullable_float4x4.gd"),
 	"double4x4": preload("./data_double4x4.gd"),
 	"double4x4?": preload("./data_nullable_double4x4.gd"),
+	"reference": preload("./data_reference.gd"),
 }
 
 @abstract func _to_variant() -> Variant
